@@ -25,7 +25,7 @@ const io = new socket_io_1.Server(exports.server, {
 });
 app.use(express_1.default.json({ limit: "50mb" }));
 app.use((0, morgan_1.default)("dev"));
-app.get("/test", (req, res) => {
+app.get("/", (req, res) => {
     res.status(201).json({
         success: true,
         message: "Socket.io is ready"
